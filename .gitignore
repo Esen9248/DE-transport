@@ -1,0 +1,12 @@
+.env
+env
+.idea
+.vscode
+*.sqlite3
+*.pyc
+*.*swp
+*.log
+build/
+__pycache__
+.vscode
+settings_custom.py
