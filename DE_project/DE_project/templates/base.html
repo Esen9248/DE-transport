@@ -1,0 +1,25 @@
+{% load static %}
+<!Doctype HTML>
+<html>
+  <head>
+    <title>
+      {% block title %}
+      {% endblock title %}
+    </title>
+    <!-- <link rel="stylesheet" href='{% static "css/base.css" %}'/> -->
+    {% block css %}
+    {% endblock css %}
+  </head>
+  <body>
+      <h1>DE Project</h1>
+      {% block page_name %}
+      {% endblock %}
+    <div>
+      {% block contents %}{% endblock contents %}
+    </div>
+    <footer>
+      Footer is here
+    </footer>
+    {% block js %}{% endblock %}
+  </body>
+</html>
