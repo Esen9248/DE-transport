@@ -2,7 +2,7 @@ from django.db import models
 from users.models import Users
 
 class Orders(models.Model):
-    palace = models.CharField(max_length=200)
+    place = models.CharField(max_length=200)
     time_at = models.IntegerField()
     time_for_order = models.IntegerField()
     cars = models.CharField(max_length=100)
