@@ -1,2 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
+
+{% block contents %}
+    <p> Place - {{ orders.place }}</p>
+    <p>Car - {{ orders.cars }}</p>
+    <p>Date - {{ orders.time_at }}</p>
+    <p>Car quantity  - {{ orders.car_quantity }}</p>
+    <a href='{% url 'order' %}'><button>Назад</button></a>
+{% endblock %}
