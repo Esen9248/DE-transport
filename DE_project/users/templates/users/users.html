@@ -12,6 +12,6 @@
 
 {% block contents %}
 {% for user in users %}
-        <p>{{ user.name }}</p>
+        <p><a href='{% url 'user-details' user.slug %}'>{{ user.name }}</a></p>
     {% endfor %}
 {% endblock %}
