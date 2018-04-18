@@ -5,7 +5,7 @@ from django.urls import reverse
 
 class Orders(models.Model):
     place = models.CharField(max_length=200, unique=True)
-    time_at = models.DateField()
+    time_at = models.DateTimeField()
     time_for_order = models.DateField()
     cars = models.CharField(max_length=100)
     car_quantity = models.IntegerField()
