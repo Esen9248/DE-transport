@@ -10,8 +10,7 @@ class Orders(models.Model):
     cars = models.CharField(max_length=100)
     car_quantity = models.IntegerField()
     car_roominess = models.IntegerField()
-<<<<<<< HEAD
-    User = models.ForeignKey(Users, on_delete=models.SET_NULL, null=True)
+    user = models.ForeignKey(Users, on_delete=models.SET_NULL, null=True)
     slug = models.SlugField(max_length=100, unique=True)
 
     def get_absolute_url(self):
@@ -19,9 +18,3 @@ class Orders(models.Model):
 
     def __str__(self):
         return f'{self.place}, {self.user}'
-=======
-    user = models.ForeignKey(Users, on_delete=models.SET_NULL, null=True)
-
-    def __str__(self):
-        return f'{self.place}, {self.user}'
->>>>>>> 48e4a7b3e4875cde0ac42b1fef846e45939568f4
