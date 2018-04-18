@@ -1,7 +1,10 @@
 from django.contrib import admin
 from .models import Orders
 
-@admin.register(Orders)
 class OrderAdmin(admin.ModelAdmin):
-    pass
+    exclude = ['place']
+    prepoluted_fields = {'slug': ('cars',)}
+
+
+admin.site.register(Orders)    
 # Register your models here.
