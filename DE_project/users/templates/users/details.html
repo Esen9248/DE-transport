@@ -15,5 +15,11 @@
     <p>Middle name - {{ user.middle_name }}</p>
     <p>Number - {{ user.number }}</p>
     <p>Some Info - {{ user.info }}</p>
+    <p>Orders:</p>
+    <ul>
+    {% for order in user.orders_set.all %}
+        <li>{{ order.place }}</li>
+        {% endfor %}
+    </ul>
     <a href='{% url 'users' %}'><button>Назад</button></a>
 {% endblock %}
