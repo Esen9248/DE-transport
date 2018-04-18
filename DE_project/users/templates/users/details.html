@@ -15,5 +15,14 @@
     <p>Middle name - {{ user.middle_name }}</p>
     <p>Number - {{ user.number }}</p>
     <p>Some Info - {{ user.info }}</p>
+<<<<<<< HEAD
+=======
+    <p>Orders:</p>
+    <ul>
+    {% for order in user.orders_set.all %}
+        <li>{{ order.place }}</li>
+        {% endfor %}
+    </ul>
+>>>>>>> 48e4a7b3e4875cde0ac42b1fef846e45939568f4
     <a href='{% url 'users' %}'><button>Назад</button></a>
 {% endblock %}
