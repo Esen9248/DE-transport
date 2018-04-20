@@ -6,14 +6,22 @@
       {% block title %}
       {% endblock title %}
     </title>
-    <!-- <link rel="stylesheet" href='{% static "css/base.css" %}'/> -->
+    <link rel="stylesheet" href='{% static "css/base.css" %}' />
     {% block css %}
     {% endblock css %}
   </head>
   <body>
-      <h1>DE Project</h1>
+    {% if request.user.is_authenticated %}
+    <div class='login'><h1>{{ request.user.username }}</h1>
+      <a href='{% url 'logout-user' %}'>Log out</a>
+    </div>
+    {% else %}  
+      <a class='login' href='{% url 'login-user' %}'>Log in</a>
+    {% endif %}
+    <h1>DE Project</h1>
       {% block page_name %}
       {% endblock %}
+
     <div>
       {% block contents %}{% endblock contents %}
     </div>
