@@ -31,3 +31,7 @@ def login_user(request):
 def logout_user(request):
     logout(request)
     return redirect(reverse('login-user'))
+
+@login_required
+def home(request):
+    return render(request, 'home.html', locals())
