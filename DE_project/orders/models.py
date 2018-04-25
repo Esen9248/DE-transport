@@ -15,7 +15,7 @@ class Orders(models.Model):
     user = models.ForeignKey(Users, on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
-        return self.cars
+        return self.place
         
     def get_absolute_url(self):
         return reverse('order-details', args=[self.slug])
