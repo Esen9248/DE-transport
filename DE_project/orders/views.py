@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from .models import Orders
 from .forms import OrderForm
 from django.contrib.auth.decorators import login_required
@@ -17,5 +17,5 @@ def post_order(request):
     form = OrderForm(request.POST or None )
     if request.method == 'POST' and form.is_valid():
         form.save()
-        return redirect(reverse('form'))
+        return redirect(reverse('home'))
     return render(request, 'post_order.html', locals())    
