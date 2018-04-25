@@ -24,3 +24,7 @@
     transition: 300ms;
     color: orange;
 }
+.head_number{
+    margin-left: 15%;
+    margin-top: 20px;
+}
