@@ -2,6 +2,7 @@ from django.db import models
 from django.db.models import permalink
 from users.models import Users
 from django.urls import reverse
+from django.utils.text import slugify
 
 
 class Orders(models.Model):
@@ -16,6 +17,12 @@ class Orders(models.Model):
 
     def __str__(self):
         return self.place
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.place)
+        return super(Orders, self).save(*args, **kwargs)    
+
         
     def get_absolute_url(self):
         return reverse('order-details', args=[self.slug])
