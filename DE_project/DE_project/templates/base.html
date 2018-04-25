@@ -6,6 +6,9 @@
       DE transport - {% block title %}
       {% endblock title %}
     </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+    crossorigin="anonymous">
     <link rel="stylesheet" href='{% static "css/base.css" %}' />
     {% block css %}
     {% endblock css %}
@@ -23,7 +26,7 @@
       <img class='logo' src='{% static 'images/DE_logo.jpg' %}'/>
       <ul class='links'>
         <li><a href='{% url 'home' %}'>Home</a></li>
-        <li><a href='#'>Make an order</a></li>
+        <li><a href='{% url 'post-order' %}'>Make an order</a></li>
         {% if request.user.is_authenticated %}
         <li><a href="{% url 'user-details' request.user.users.slug %}">Profile</a></li>
         {% endif %}

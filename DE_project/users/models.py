@@ -10,7 +10,7 @@ class Users(models.Model):
     sur_name = models.CharField(max_length=255)
     middle_name = models.CharField(max_length=255)
     number = models.IntegerField()
-    info = models.TextField()
+    info = models.TextField(null=True)
     auth_user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     def __str__(self):
         return self.name

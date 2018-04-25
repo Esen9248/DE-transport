@@ -2,3 +2,25 @@
     position: absolute;
     margin-left: 90%;
 }
+
+.header{
+    display: flex;
+}
+.links{
+    margin-top: 20px;
+    margin-left: 25%;
+    list-style: none;
+}
+.links li{
+    display: inline;
+    margin: 0;
+    padding: 20px;
+}
+.links a{
+    color: #000;
+    text-decoration: none;
+}
+.links a:hover{
+    transition: 300ms;
+    color: orange;
+}

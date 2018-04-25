@@ -35,3 +35,10 @@ def logout_user(request):
 @login_required
 def home(request):
     return render(request, 'home.html', locals())
+
+def register_user(request):
+    register_user = AddUserForm(request.POST or None)
+    if register_user.is_valid() and request.method == 'POST':
+        register_user.save()
+        return redirect(reverse('orders'))
+    return render(request, 'users/register_user.html', locals())

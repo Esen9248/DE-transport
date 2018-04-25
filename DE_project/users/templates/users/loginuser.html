@@ -9,10 +9,13 @@ Login User
 {% endblock %}
 
 {% block contents %}
+<div class='main_div_login'>
 <h2>{{ error_message }}</h2>
 <form method='POST'>
     {% csrf_token %}
     {{ login_user_form.as_p }}
     <input type='submit' value='Login'/>
 </form>
+<a href='{% url 'register-user' %}' class='register'>Register New User</a>
+</div>
 {% endblock %}
