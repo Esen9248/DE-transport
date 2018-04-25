@@ -19,9 +19,13 @@ from django.conf.urls.static import static
 from django.urls import include,path
 from orders import urls as orders_urls
 from users import urls as users_urls
+from users import views as users_views
 
 urlpatterns = [
+    path('', users_views.login_user, name='login-user'),
+    path('logout', users_views.logout_user, name='logout-user'),
     path('admin/', admin.site.urls),
     path('orders/', include('orders.urls')),
     path('users/', include('users.urls')),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('home', users_views.home, name='home')
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

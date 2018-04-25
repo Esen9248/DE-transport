@@ -4,6 +4,7 @@
 {% block contents %}
 {% for order in order %}
 
-<p><a href='{% url 'order-details' order.slug %}'>{{ order.cars }}</a></p>
+<p><a href='{% url 'order-details' order.slug %}'>{{ order.cars }}, {{ order.user }}</a></p>
+
 {% endfor %}
 {% endblock %}
