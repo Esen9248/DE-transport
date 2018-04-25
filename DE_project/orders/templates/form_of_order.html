@@ -3,6 +3,7 @@
 
 {% block contents %}
 {% for order in order %}
+
 <p><a href='{% url 'order-details' order.slug %}'>{{ order.cars }}</a></p>
 {% endfor %}
 {% endblock %}
