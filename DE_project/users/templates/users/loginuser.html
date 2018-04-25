@@ -9,6 +9,7 @@ Login User
 {% endblock %}
 
 {% block contents %}
+<h2>{{ error_message }}</h2>
 <form method='POST'>
     {% csrf_token %}
     {{ login_user_form.as_p }}

@@ -15,7 +15,7 @@ def user_details(request, slug):
     return render(request, 'users/details.html', locals())
 
 def login_user(request):
-    next_url = request.GET.get('next', reverse('users'))
+    next_url = request.GET.get('next', reverse('home'))
     login_user_form = LoginUser(request.POST or None)
     if login_user_form.is_valid():
         username = login_user_form.cleaned_data['username']
@@ -26,7 +26,7 @@ def login_user(request):
             return redirect(next_url)
         else:
             error_message = 'Can`t login' 
-    return render(request, 'loginuser.html', locals())
+    return render(request, 'users/loginuser.html', locals())
 @login_required
 def logout_user(request):
     logout(request)
