@@ -8,7 +8,8 @@ from django.utils.text import slugify
 class Orders(models.Model):
     place = models.CharField(max_length=200)
     time_at = models.DateTimeField()
-    time_for_order = models.DateField()
+    time_from = models.DateTimeField()
+    time_to = models.DateTimeField()
     cars = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
     car_quantity = models.IntegerField()
