@@ -8,11 +8,14 @@ class OrderForm(ModelForm):
         fields = [
             'place',
             'time_at',
-            'time_for_order',
+            'time_from',
+            'time_to',
             'cars',
             'car_quantity',
             'car_roominess'
         ]
         widgets = {
             'time_at': forms.DateInput(attrs={'class':'datepicker'}),
+            'time_from': forms.DateInput(attrs={'id': 'from'}),
+            'time_to': forms.DateInput(attrs={'id': 'to'})
         }
