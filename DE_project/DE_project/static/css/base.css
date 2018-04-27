@@ -2,10 +2,15 @@
     position: absolute;
     margin-left: 90%;
 }
+.logouted{
+    margin-top:3%;
+    position: absolute;
+    margin-left: 90%;
+}
 
 .header{
     display: flex;
-    position: fixed; 
+    /* position: fixed;  */
 }
 .links{
     margin-top: 20px;
