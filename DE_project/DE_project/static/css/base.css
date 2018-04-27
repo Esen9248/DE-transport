@@ -5,6 +5,7 @@
 
 .header{
     display: flex;
+    position: fixed; 
 }
 .links{
     margin-top: 20px;

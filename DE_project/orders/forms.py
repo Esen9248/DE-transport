@@ -11,8 +11,10 @@ class OrderForm(ModelForm):
             'time_for_order',
             'cars',
             'car_quantity',
-            'car_roominess'
+            'car_roominess',
+            'user'
         ]
         widgets = {
+            'user': forms.HiddenInput(),
             'time_at': forms.DateInput(attrs={'class':'datepicker'}),
         }

@@ -14,7 +14,7 @@ def order_details(request, slug):
 
 @login_required
 def post_order(request):
-    form = OrderForm(request.POST or None )
+    form = OrderForm(request.POST or None, initial={'user': request.user.users})
     if request.method == 'POST' and form.is_valid():
         form.save()
         return redirect(reverse('home'))
