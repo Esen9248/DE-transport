@@ -34,7 +34,7 @@ body{
     transition: 300ms;
     color: orange;
 }
-.head_number{
+.head_info{
     margin-left: 15%;
-    margin-top: 20px;
+    margin-top: 10px;
 }
