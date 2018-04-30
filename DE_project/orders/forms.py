@@ -12,6 +12,7 @@ class OrderForm(ModelForm):
             'time_to',
             'cars',
             'car_quantity',
+            'info_about_order',
             'number_of_passenger_seat',
             'user'
         ]
