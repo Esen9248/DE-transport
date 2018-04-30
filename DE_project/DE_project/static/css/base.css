@@ -3,14 +3,9 @@ body{
     font-size: 200%;
 }
 .login{
-    position: absolute;
-    margin-left: 90%;
+    margin-left: 5%;
 }
-.logouted{
-    margin-top:3%;
-    position: absolute;
-    margin-left: 90%;
-}
+
 
 .header{
     display: flex;

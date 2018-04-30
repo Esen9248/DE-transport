@@ -6,5 +6,5 @@
     <p>Car - {{ orders.cars }}</p>
     <p>Date - {{ orders.time_at }}</p>
     <p>Car quantity  - {{ orders.car_quantity }}</p>
-    <a href='{% url 'order' %}'><button>Назад</button></a>
+    <a href='{% url 'user-details' request.user.users.slug %}'><button>Назад</button></a>
 {% endblock %}
