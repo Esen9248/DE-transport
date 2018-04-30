@@ -1,5 +1,6 @@
 {% load static %}
 <!Doctype HTML>
+<!-- 72535619 wifi password -->
 <html>
   <head>
     <title>
@@ -16,14 +17,6 @@
     {% endblock css %}
   </head>
   <body>
-    {% if request.user.is_authenticated %}
-    <div class='login'>
-      <h1>{{request.user}}</h1>
-      <a href='{% url 'logout-user' %}'>Log out</a>
-    </div>
-    {% else %}  
-    <a class='logouted' href='{% url 'login-user' %}'>Log in</a>
-    {% endif %}
     <header class='header'>
       <img class='logo' src='{% static 'images/DE_logo.jpg' %}'/>
       <ul class='links'>
@@ -35,9 +28,17 @@
       </ul>
       <div class='head_info'>
       <h4><b>0777-77-77-77<br>
-        Toktonalieva 6b, IT Academy
+        Toktonaliev str. 6b, IT Academy
       </b></h4>
     </div>
+    {% if request.user.is_authenticated %}
+    <div class='login'>
+      <h1>{{request.user}}</h1>
+      <a href='{% url 'logout-user' %}'>Log out</a>
+    </div>
+    {% else %}  
+    <a class='login' href='{% url 'login-user' %}'>Log in</a>
+    {% endif %}
     </header>
     {% block page_name %}
     {% endblock %}

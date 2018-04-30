@@ -6,11 +6,10 @@
     User - {{ user.name }}
 {% endblock %}
 
-{% block page_name %}   
-    <h2>{{ user.name }}</h2>
-{% endblock %}
 
 {% block contents %}
+<div class='main container'>
+    <h2>{{ user.name }}</h2>
     <p>Sur name - {{ user.sur_name }}</p>
     <p>Middle name - {{ user.middle_name }}</p>
     <p>Number - {{ user.number }}</p>
@@ -21,4 +20,5 @@
         <li><a href="{% url 'order-details' order.slug %}"> {{ order.place }} </a></li>
         {% endfor %}
     </ul>
+</div>
 {% endblock %}
