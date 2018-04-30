@@ -18,7 +18,7 @@
     <p>Orders:</p>
     <ul>
     {% for order in user.orders_set.all %}
-        <li>{{ order.place }}</li>
+        <li><a href='{% url 'order-details' order.slug %}'> {{ order.place } </a>}</li>
         {% endfor %}
     </ul>
 {% endblock %}

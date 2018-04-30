@@ -12,7 +12,7 @@ class OrderForm(ModelForm):
             'time_to',
             'cars',
             'car_quantity',
-            'car_roominess',
+            'number_of_passenger_seat',
             'user'
         ]
         widgets = {

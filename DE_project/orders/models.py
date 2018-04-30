@@ -13,7 +13,7 @@ class Orders(models.Model):
     cars = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
     car_quantity = models.IntegerField()
-    car_roominess = models.IntegerField()
+    number_of_passenger_seat = models.IntegerField()
     user = models.ForeignKey(Users, on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
