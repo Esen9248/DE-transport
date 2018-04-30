@@ -7,12 +7,10 @@
       {% endblock title %}
     </title>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
     crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Gamja+Flower" rel="stylesheet"> 
     <link rel="stylesheet" href='{% static "css/base.css" %}' />
     {% block css %}
     {% endblock css %}
@@ -24,7 +22,7 @@
       <a href='{% url 'logout-user' %}'>Log out</a>
     </div>
     {% else %}  
-      <a class='logouted' href='{% url 'login-user' %}'>Log in</a>
+    <a class='logouted' href='{% url 'login-user' %}'>Log in</a>
     {% endif %}
     <header class='header'>
       <img class='logo' src='{% static 'images/DE_logo.jpg' %}'/>
@@ -37,27 +35,26 @@
       </ul>
       <h4 class='head_number'><b>0777-77-77-77</b></h4>
     </header>
-      {% block page_name %}
-      {% endblock %}
-
+    {% block page_name %}
+    {% endblock %}
+    
     <div>
       {% block contents %}{% endblock contents %}
     </div>
     <footer>
       Footer is here
     </footer>
-    {% block js %}{% endblock %}
- 
-  <script>
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        {% block js %}{% endblock %}
+    <script>
     $(function() {
-      console.log('hjkhkjhkjhjk');
       $( ".datepicker" ).datepicker({
         changeMonth: true,
         changeYear: true,
         yearRange: "1900:2012",
-        dateFormat: "yy-mm-dd",
-        // You can put more options here.
-  
+        dateFormat: "yy-mm-dd",  
       });
     });
     $( function() {

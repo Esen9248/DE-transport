@@ -13,9 +13,9 @@ Login User
 <form method='POST'>
     {% csrf_token %}
     {{ login_user_form.as_p }}
-    <input type='submit' value='Login'/>
+    <input type='submit' value='Login' class='login_inp'/>
 </form>
-<a href='{% url 'register-user' %}' class='register'>Register New User</a>
+<span><a href='{% url 'register-user' %}' class='register'>Register New User</a></span>
 </div>
 {% endblock %}
 
