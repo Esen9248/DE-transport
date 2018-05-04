@@ -20,7 +20,7 @@
     <header class='header'>
       <img class='logo' src='{% static 'images/DE_logo.jpg' %}'/>
       <ul class='links'>
-        <li><a href='{% url 'home' %}'>Home</a></li>
+        <li><a href='{% url 'cars:home' %}'>Home</a></li>
         <li><a href='{% url 'post-order' %}'>Make an order</a></li>
         {% if request.user.is_authenticated %}
         <li><a href="{% url 'user-details' request.user.users.slug %}">Profile</a></li>

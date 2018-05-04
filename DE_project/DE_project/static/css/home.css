@@ -1,0 +1,18 @@
+.home{
+    background: url('../images/cars.png') center center / cover no-repeat;
+    margin-left:250px;
+    max-width: 1000px;
+    height: 200px;
+
+}
+
+.cars{
+	padding-left:20px;
+	display:flex;
+	flex-wrap:wrap;
+}
+
+.img{
+    width:200px;
+    height: 200px;
+}
