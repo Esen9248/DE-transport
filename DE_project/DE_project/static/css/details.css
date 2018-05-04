@@ -30,5 +30,8 @@
     text-align: center;
 }
 .orders li{
-    margin-left: 40%;
+    margin-left: 45%;
+}
+.orders a{
+    color: inherit;
 }

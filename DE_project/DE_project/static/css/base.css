@@ -1,6 +1,7 @@
 body{
     font-family: 'Oswald', sans-serif;
     font-size: 200%;
+    background: url('../images/brushed.png') center center repeat;
 }
 .login{
     margin-left: 5%;
