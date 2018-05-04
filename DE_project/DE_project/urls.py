@@ -20,6 +20,7 @@ from django.urls import include,path
 from orders import urls as orders_urls
 from users import urls as users_urls
 from users import views as users_views
+from cars import views as cars_views
 
 urlpatterns = [
     path('', users_views.login_user, name='login-user'),
@@ -28,5 +29,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('orders/', include('orders.urls')),
     path('users/', include('users.urls')),
-    path('home', users_views.home, name='home')
+    path('home/', include('cars.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

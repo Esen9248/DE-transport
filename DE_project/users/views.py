@@ -15,7 +15,7 @@ def user_details(request, slug):
     return render(request, 'users/details.html', locals())
 
 def login_user(request):
-    next_url = request.GET.get('next', reverse('home'))
+    next_url = request.GET.get('next', reverse('cars:home'))
     login_user_form = LoginUser(request.POST or None)
     if login_user_form.is_valid():
         username = login_user_form.cleaned_data['username']
@@ -32,13 +32,10 @@ def logout_user(request):
     logout(request)
     return redirect(reverse('login-user'))
 
-@login_required
-def home(request):
-    return render(request, 'home.html', locals())
 
 def register_user(request):
     register_user = AddUserForm(request.POST or None)
     if register_user.is_valid() and request.method == 'POST':
         register_user.save()
-        return redirect(reverse('home'))
+        return redirect(reverse('cars:home'))
     return render(request, 'users/register_user.html', locals())

@@ -1,6 +1,7 @@
 from django.db import models
 from django.db.models import permalink
 from users.models import Users
+from cars.models import Cars
 from django.urls import reverse
 from django.utils.text import slugify
 
@@ -10,7 +11,7 @@ class Orders(models.Model):
     time_at = models.DateTimeField()
     time_from = models.DateTimeField()
     time_to = models.DateTimeField()
-    cars = models.CharField(max_length=100, unique=True)
+    cars = models.ManyToManyField(Cars)
     slug = models.SlugField(max_length=100, unique=True)
     car_quantity = models.IntegerField()
     info_about_order = models.TextField()
