@@ -12,7 +12,7 @@ Home
 
 
 {% block contents %}
-<h2>Home</h2>
+
 <div class="home">
 
 </div>
@@ -22,7 +22,7 @@ Home
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4" style="padding:10px">
                 <div style="border:3px solid #e94615">
                 <img class="img center-block" src="{{ MEDIA_URL }}{{ car.image }}">
-                <a class="text-center" href="{% url 'cars:car-details' car.slug %}" > <p> {{ car.brand }} {{ car.model }} </p> </a>
+                <a class="text-center" href="{% url 'cars:car-details' car.slug %}" style="color:inherit"> <p> {{ car.brand }} {{ car.model }} </p> </a>
                 </div>
             </div>
             {% endfor %}
