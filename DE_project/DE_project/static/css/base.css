@@ -1,5 +1,5 @@
 body{
-    font-family: 'Gamja Flower', cursive;
+    font-family: 'Oswald', sans-serif;
     font-size: 200%;
 }
 .login{
@@ -27,9 +27,13 @@ body{
 }
 .links a:hover{
     transition: 300ms;
-    color: orange;
+    color: #E94615;
 }
 .head_info{
     margin-left: 15%;
     margin-top: 10px;
+}
+.logo{
+    margin-top:1rem;
+    height: 100%;
 }

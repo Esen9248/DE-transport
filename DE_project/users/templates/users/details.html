@@ -6,19 +6,29 @@
     User - {{ user.name }}
 {% endblock %}
 
+{% block page_name %}
+<div class='page_name_div'>
+<h2 class='page_name'>{{ user.name }}</h2>
+</div>
+{% endblock %}
 
 {% block contents %}
-<div class='main container'>
-    <h2>{{ user.name }}</h2>
-    <p>Sur name - {{ user.sur_name }}</p>
-    <p>Middle name - {{ user.middle_name }}</p>
-    <p>Number - {{ user.number }}</p>
-    <p>Some Info - {{ user.info }}</p>
+<div class='informations container'>
+    <div><p>Sur name - {{ user.sur_name }}</p></div>
+    <div><p>Middle name - {{ user.middle_name }}</p></div>
+    <div><p>Number - {{ user.number }}</p></div>
+    <div><p>Information - {{ user.info }}</p></div>
+</div>
+<div class='orders'>
     <p>Orders:</p>
     <ul>
-    {% for order in user.orders_set.all %}
-        <li><a href="{% url 'order-details' order.slug %}"> {{ order.place }} </a></li>
+        {% for order in user.orders_set.all %}
+            <li><a href="{% url 'order-details' order.slug %}"> {{ order.place }} </a></li>
         {% endfor %}
     </ul>
 </div>
+{% endblock %}
+
+{% block css %}
+<link rel='stylesheet' href='{% static 'css/details.css' %}'/>
 {% endblock %}

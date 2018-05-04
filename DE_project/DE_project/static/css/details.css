@@ -1,0 +1,34 @@
+.page_name{
+    text-align: center;
+    font-size: 300%;
+    color: white;
+    padding-top: 5%;
+}
+.page_name_div{
+    height: 300px;
+    background: url('../images/road3.jpg') center center / cover no-repeat;
+}
+.informations{
+    margin-top: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.informations div{
+    margin: 0 0 4rem 2%;
+    width: 400px;
+    border: 3px solid #E94615;
+    padding: 2%;
+    text-align: center;
+    font-size: 120%;
+}
+.orders{
+    font-size: 120%;
+}
+
+.orders p{
+    text-align: center;
+}
+.orders li{
+    margin-left: 40%;
+}
