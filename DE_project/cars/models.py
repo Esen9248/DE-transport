@@ -5,7 +5,7 @@ class Cars(models.Model):
     brand = models.CharField(max_length=100, unique=True)
     model = models.CharField(max_length=100, unique=True)
     year = models.IntegerField()
-    volume = models.IntegerField()
+    volume = models.DecimalField(max_digits=5, decimal_places=2)
     color = models.CharField(max_length=100)
     image = models.FileField(upload_to='image', blank=True)
     slug = models.SlugField(max_length=100, unique=True)
@@ -13,7 +13,7 @@ class Cars(models.Model):
     def __str__(self):
         return u'%s %s' % (self.brand, self.model)
      
-    # def get_absolute_url(self):
-    #     return reverse('car-details', args=[self.slug])
+    def get_absolute_url(self):
+        return reverse('car-details', args=[self.slug])
 
 

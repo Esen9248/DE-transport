@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+Car Details
+{% endblock %}
+
+
+{% block css %}
+<link rel='stylesheet' href='{% static 'css/details.css' %}'/>
+
+{% endblock %}
+ {% block contents %}
+
+ <div><img class="img" src="{{ MEDIA_URL }}{{ car.image }}" /> 
+
+<div class="informations container">
+    
+    <div><p>Brand - {{ car.brand }}</p> </div>
+    <div><p>Model - {{ car.model }}</p></div>
+    <div><p>Year - {{ car.year }}</p></div>
+    <div><p>Volume - {{ car.volume }}</p></div>
+    <div><p>Color - {{ car.color }}</p></div>  
+      
+</div>
+{% endblock %} 
