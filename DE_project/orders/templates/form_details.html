@@ -11,6 +11,7 @@
     <p>Time for order - from {{ orders.time_from }} to {{ orders.time_to }}</p>
     <p>Number of passenger seat - {{ orders.car_roominess }}</p>
     <p>Car quantity  - {{ orders.car_quantity }}</p>
+    
     <a href='{% url 'user-details' request.user.users.slug %}'><button>Назад</button></a>
 
 {% endblock %}

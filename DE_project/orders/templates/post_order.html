@@ -1,9 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block css %}
+ <link rel="stylesheet" href='{% static 'css/post-order.css' %}'/>
+{% endblock %}
+
 {% block contents %}
+
 <div>
-    <form method="POST">
+    <form class="form-post" method="POST">
         {% csrf_token %}
             {{ form.as_p }}
      

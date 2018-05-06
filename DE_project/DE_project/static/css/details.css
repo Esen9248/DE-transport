@@ -35,3 +35,16 @@
 .orders a{
     color: inherit;
 }
+.orders a:hover{
+    transition: 600ms;
+    color:#E94615;
+    text-decoration: none;
+}
+
+.img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:200px;
+    height: 200px;
+}
