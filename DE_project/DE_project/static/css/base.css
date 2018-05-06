@@ -6,7 +6,15 @@ body{
 .login{
     margin-left: 5%;
 }
-
+.login_div{
+    margin-left: 5%;
+}
+.login:hover{
+    transition: 300ms;
+}
+.logout:hover{
+    transition: 300ms;
+}
 
 .header{
     display: flex;

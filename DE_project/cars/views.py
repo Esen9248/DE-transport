@@ -12,5 +12,5 @@ def home(request):
     
 @login_required
 def car_details(request, slug):
-    cars = get_object_or_404(Cars, slug=slug)
+    car = get_object_or_404(Cars, slug=slug)
     return render(request, 'car_details.html', locals())    

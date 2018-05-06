@@ -1,4 +1,4 @@
-.home{
+.title-img{
     background: url('../images/cars.png') center center  no-repeat;
     height: 200px;
 }
@@ -12,4 +12,12 @@
 .img{
     width:200px;
     height: 200px;
+}
+.car-link{
+    color: inherit;
+}
+.car-link:hover{
+    transition: 300ms;
+    color: #E94615;
+    text-decoration: none;
 }

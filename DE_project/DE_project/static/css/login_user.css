@@ -3,7 +3,11 @@
     padding: 1%;
     padding-bottom: 2%;
     border: 3px solid #E94615;
+    background-color: #fff;
 }
 .page_name{
     text-align: center;
+}
+.register:hover{
+    transition: 300ms;
 }
