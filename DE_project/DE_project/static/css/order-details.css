@@ -1,5 +1,12 @@
-.page-name{
+.page_name{
     text-align: center;
+    font-size: 300%;
+    color: white;
+    padding-top: 5%;
+}
+.page_name_div{
+    height: 300px;
+    background: url('../images/road2.jpg') center center / cover no-repeat;
 }
 .order-info{
     margin-top: 3%;

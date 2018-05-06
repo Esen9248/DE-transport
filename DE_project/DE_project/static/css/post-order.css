@@ -1,6 +1,29 @@
 .form-post {
-    margin: 2% 23% 2% 35%;
+    margin: 2% 27% 2% 31%;
     padding: 1%;
     border: 3px solid #E94615;
     background-color: #fff;
+}
+.page_name{
+    text-align: center;
+    font-size: 300%;
+    color: white;
+    padding-top: 5%;
+}
+.page_name_div{
+    height: 300px;
+    background: url('../images/roadbackground.jpg') center center / cover no-repeat;
+}
+.footer{
+    background-color: #E94615;
+    bottom:0;
+    left:0;
+    width: 100%;
+    height: 40px;
+}
+.footer p{
+    text-align: right;
+}
+footer{
+    display:none;
 }
