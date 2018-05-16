@@ -19,3 +19,23 @@ def post_order(request):
         form.save()
         return redirect(reverse('cars:home'))
     return render(request, 'post_order.html', locals())    
+
+
+@login_required
+def post_edit(request, id):
+    order = Orders.objects.get(id=id)
+    form = OrderForm(request.POST or None, instance=order)
+    if request.method == 'POST' and form.is_valid():
+        form.save()
+        return redirect(reverse('cars:home'))
+    return render(request, 'post_order.html', locals())   
+
+@login_required
+def delete_post(request, id):
+    order = Orders.objects.get(id=id)
+    
+    if request.method == 'POST':
+        order.delete()
+        return redirect(reverse('cars:home'))
+
+    return render(request, 'post_order.html', locals())         

@@ -24,7 +24,10 @@
     <div><p>Number of passenger seat - {{ order.number_of_passenger_seat }}</p></div>
     <div><p>Car quantity  - {{ order.car_quantity }}</p></div>
     <div><p>Info - {{ order.info_about_order }}</p></div>
+    <a href=" {% url 'post-edit' order.id %} ">Edit</a>
+            <a href=" {% url 'delete-post' order.id %}" >Delete</a>
 </div>
+
 {% endblock %}
 
 {% block css %}
