@@ -13,19 +13,19 @@
 
 {% block contents %}
 <div class='order-info container'>
-    <div><p>Car -{% for car in order.cars.all %}
+    <div class='div'><p>Car -{% for car in order.cars.all %}
         {% if car == order.cars.last %} {{ car }}
             {% else %}
             {{ car }},
          {% endif %}
           {% endfor %}</p></div>
-    <div><p>Date - {{ order.time_at }}</p></div>
-    <div><p>Time for order - from {{ order.time_from }} to {{ order.time_to }}</p></div>
-    <div><p>Number of passenger seat - {{ order.number_of_passenger_seat }}</p></div>
-    <div><p>Car quantity  - {{ order.car_quantity }}</p></div>
-    <div><p>Info - {{ order.info_about_order }}</p></div>
-    <a href=" {% url 'post-edit' order.id %} ">Edit</a>
-            <a href=" {% url 'delete-post' order.id %}" >Delete</a>
+    <div class='div'><p>Date - {{ order.time_at }}</p></div>
+    <div class='div'><p>Time for order - from {{ order.time_from }} to {{ order.time_to }}</p></div>
+    <div class='div'><p>Number of passenger seat - {{ order.number_of_passenger_seat }}</p></div>
+    <div class='div'><p>Car quantity  - {{ order.car_quantity }}</p></div>
+    <div class='div'><p>Info - {{ order.info_about_order }}</p></div>
+    <div class='button'><button class='btn btn-lg btn-success'><a href=" {% url 'post-edit' order.id %} ">Edit</a></button></div>
+    <div class='button'><button class='btn btn-lg btn-danger'><a href=" {% url 'delete-post' order.id %}" >Delete</a></button></div>
 </div>
 
 {% endblock %}

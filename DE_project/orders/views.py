@@ -14,6 +14,7 @@ def order_details(request, slug):
 
 @login_required
 def post_order(request):
+    page_name = 'Make An Order'
     form = OrderForm(request.POST or None, initial={'user': request.user.users})
     if request.method == 'POST' and form.is_valid():
         form.save()
@@ -23,6 +24,7 @@ def post_order(request):
 
 @login_required
 def post_edit(request, id):
+    page_name = 'Edit Your Order'
     order = Orders.objects.get(id=id)
     form = OrderForm(request.POST or None, instance=order)
     if request.method == 'POST' and form.is_valid():
