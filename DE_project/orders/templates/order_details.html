@@ -24,8 +24,8 @@
     <div class='div'><p>Number of passenger seat - {{ order.number_of_passenger_seat }}</p></div>
     <div class='div'><p>Car quantity  - {{ order.car_quantity }}</p></div>
     <div class='div'><p>Info - {{ order.info_about_order }}</p></div>
-    <div class='button'><button class='btn btn-lg btn-success'><a href=" {% url 'post-edit' order.id %} ">Edit</a></button></div>
-    <div class='button'><button class='btn btn-lg btn-danger'><a href=" {% url 'delete-post' order.id %}" >Delete</a></button></div>
+    <div class='button'><a class='btn btn-lg btn-success' href=" {% url 'post-edit' order.id %} ">Edit</a></div>
+    <div class='button'><a class='btn btn-lg btn-danger' href=" {% url 'delete-post' order.id %}" >Delete</a></div>
 </div>
 
 {% endblock %}
