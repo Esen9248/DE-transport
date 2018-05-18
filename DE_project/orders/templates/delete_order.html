@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block css %}
- <link rel="stylesheet" href='{% static 'css/post-order.css' %}'/>
+ <link rel="stylesheet" href='{% static 'css/delete.css' %}'/>
 {% endblock %}
 
 {% block contents %}
@@ -10,10 +10,16 @@
 <div>
     <form class="form-post" method="POST">
         {% csrf_token %}
-            {{ form.as_p }}
-     
-            <input type="submit" value="send">
-
+        {{ form.as_p }}
+            <h1>Are You sure to delete this order?</h1>
+            <div class='buttons'>
+            <div class='button_separately'><input class='btn btn-danger btn-lg' type="submit" value="Delete"></div>
+            <div class='button_separately'><a class='btn btn-primary btn-lg' href='{% url 'order-details' order.slug %}'>Cancel</a></div>
+        </div>
     </form>
 </div>
+{% endblock %}
+
+{% block title %}
+Delete
 {% endblock %}
