@@ -38,4 +38,4 @@ def delete_post(request, id):
     if request.method == 'POST':
         order.delete()
         return redirect(reverse('cars:home'))
-    return render(request, 'post_order.html', locals())         
+    return render(request, 'delete_order.html', locals())         
