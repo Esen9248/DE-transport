@@ -24,5 +24,4 @@ class OrderForm(ModelForm):
             'time_to': forms.DateInput(attrs={'id': 'to', 'class': 'form-control'}),
             'cars': forms.SelectMultiple(attrs={'class': 'form-control'}),
             'info_about_order': forms.TextInput(attrs={'class': 'form-control', 'rows': '3'}),
-        
         }

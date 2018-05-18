@@ -35,9 +35,7 @@ def post_edit(request, id):
 @login_required
 def delete_post(request, id):
     order = Orders.objects.get(id=id)
-    
     if request.method == 'POST':
         order.delete()
         return redirect(reverse('cars:home'))
-
     return render(request, 'post_order.html', locals())         

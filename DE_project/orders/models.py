@@ -25,8 +25,6 @@ class Orders(models.Model):
         if not self.slug:
             self.slug = slugify(self.place)
         return super(Orders, self).save(*args, **kwargs)    
-
-        
     def get_absolute_url(self):
         return reverse('order-details', args=[self.slug])
 
