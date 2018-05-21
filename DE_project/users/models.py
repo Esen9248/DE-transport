@@ -7,6 +7,7 @@ from django.conf import settings
 class Users(models.Model):
     name = models.CharField(max_length=255, unique=True)
     slug = models.SlugField(max_length=255, unique=True)
+    email = models.EmailField()
     sur_name = models.CharField(max_length=255)
     middle_name = models.CharField(max_length=255)
     number = models.IntegerField()

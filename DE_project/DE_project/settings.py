@@ -123,3 +123,9 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
 
 LOGIN_URL = '/'
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'de.transport123@gmail.com'
+EMAIL_HOST_PASSWORD = 'daniyar9248'
+EMAIL_PORT = 587

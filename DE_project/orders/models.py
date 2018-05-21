@@ -4,7 +4,8 @@ from users.models import Users
 from cars.models import Cars
 from django.urls import reverse
 from django.utils.text import slugify
-
+from django.db.models import signals
+from .tasks import order_verified_send_mail
 
 class Orders(models.Model):
     place = models.CharField(max_length=200)
@@ -27,4 +28,10 @@ class Orders(models.Model):
         return super(Orders, self).save(*args, **kwargs)    
     def get_absolute_url(self):
         return reverse('order-details', args=[self.slug])
+        
+def user_order_save(sender, instance, signal, *args, **kwargs):
+    email = instance.user.email
+    order_verified_send_mail.delay(email, 'Your order is verified')
+
+signals.post_save.connect(user_order_save, sender=Orders)
 

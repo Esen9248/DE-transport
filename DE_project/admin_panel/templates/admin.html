@@ -1,3 +1,16 @@
-#1 Админ панель - CRUD
+<!-- #1 Админ панель - CRUD
 #2 E-mail - Celery
-#3 Подтверждение заказа - Отказано - Ожидает ответа
+#3 Подтверждение заказа - Отказано - Ожидает ответа -->
+{% load static %}
+<html>
+    <head>
+        <title>DE transport - ADMIN</title>
+        <link rel='stylesheet' href='{% static 'css/admin.css' %}'/>
+    </head>
+<body>
+    {% for order in orders %}
+    <p>{{ order.place}}, {{ order.user }}</p>
+    {% endfor %}
+
+</body>
+</html>
