@@ -21,13 +21,11 @@ from orders import urls as orders_urls
 from users import urls as users_urls
 from users import views as users_views
 from cars import views as cars_views
-from admin_panel import views
 
 urlpatterns = [
     path('', users_views.login_user, name='login-user'),
     path('logout', users_views.logout_user, name='logout-user'),
     path('register-user', users_views.register_user, name='register-user'),
-    path('admin_panel/', include('admin_panel.urls')),
     path('admin/', admin.site.urls),
     path('orders/', include('orders.urls')),
     path('users/', include('users.urls')),
